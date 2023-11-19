@@ -1,18 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GDSC NCCU Website Frontend
+
+---
+
+## **!!!! Please read this before you start anything !!!!**
+
+## Git Branch Rule
+
+- **`main`**: production branch for deploy, **only allow pull request to merge** from `main_dev` branch.
+- **`main_dev`**: development branch for production, **only allow pull request to merge** from `dev_(feature name)` branch or **`fix_(issue name)` branch.
+- **`dev_(feature name)`**: development branch for each feature.
+  - For a new feature, create a new branch from `main_dev` branch.
+  - When the feature is completed, create a pull request to merge into `main_dev` branch.
+  - After the pull request is merged, delete the branch.
+- **`fix_(issue name)`**: development branch for each issue.
+  - For fixing an issue, create a new branch from `main_dev` branch.
+  - When the issue is fixed, create a pull request to merge into `main_dev` branch.
+  - After the pull request is merged, delete the branch.
+
+## Code Style
+
+Required extensions: `prettier`, `eslint`
+
+- We use `prettier` to format our code. Please install `prettier` extension in your editor.
+  - You can also use `pnpm format` to format all code.
+- Also, we use `eslint` to check our code. Please install `eslint` extension in your editor.
+
+## Commit Message Rule
+
+We use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) / [約定式提交](https://www.conventionalcommits.org/zh-hant/v1.0.0/) to format our commit message.
+
+```txt
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+### The `<type>` Must Be One Of The Following
+
+- **`feat(feature name)`**: for new feature.
+  - General feature.
+- **`fix(issue name)`**: for fixing an issue.
+  - For example, fix a bug or wrong feature implement.
+- **`refactor(feature name)`**: for refactoring code.
+- **`ci(feature name)`**: for CI/CD.
+  - For example, add GitHub Actions.
+- **`revert(feature name)`**: for reverting changes.
+- **`style(feature name)`**: for styling code.
+  - Only for styling code like `prettier` working, **not for styling UI**.
+- **`docs(feature name)`**: for documentation.
+  - For example, add README.md.
+  - Or, add comments oe JSDoc.
+- **`build(feature name)`**: for build system.
+  - Like `nvmrc`, `package.json`, `pnpm-lock.yaml`, etc.
+- **`perf(feature name)`**: for performance.
+- **`test(feature name)`**: for testing code.
+- **`chore(feature name)`**: for other things.
+
+---
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
+
+We **only using [`pnpm`](https://pnpm.js.org/)** to install dependencies as package manager. You can install it with `npm i -g pnpm`.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
