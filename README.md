@@ -37,21 +37,26 @@ We use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) / 
 [optional footer(s)]
 ```
 
-- **`feat: (feature name)`**: for new feature.
-- **`fix: (issue name)`**: for fixing an issue.
-- **`refactor: (feature name)`**: for refactoring code.
-- **`ci: (feature name)`**: for CI/CD.
+### The `<type>` Must Be One Of The Following
+
+- **`feat(feature name)`**: for new feature.
+  - General feature.
+- **`fix(issue name)`**: for fixing an issue.
+  - For example, fix a bug or wrong feature implement.
+- **`refactor(feature name)`**: for refactoring code.
+- **`ci(feature name)`**: for CI/CD.
   - For example, add GitHub Actions.
-- **`perf: (feature name)`**: for performance.
-- **`revert: (feature name)`**: for reverting changes.
-- **`style: (feature name)`**: for styling code.
+- **`revert(feature name)`**: for reverting changes.
+- **`style(feature name)`**: for styling code.
   - Only for styling code like `prettier` working, **not for styling UI**.
-- **`test: (feature name)`**: for testing code.
-- **`docs: (feature name)`**: for documentation.
+- **`docs(feature name)`**: for documentation.
   - For example, add README.md.
   - Or, add comments oe JSDoc.
-- **`chore: (feature name)`**: for other things.
-- **`build: (feature name)`**: for build system.
+- **`build(feature name)`**: for build system.
+  - Like `nvmrc`, `package.json`, `pnpm-lock.yaml`, etc.
+- **`perf(feature name)`**: for performance.
+- **`test(feature name)`**: for testing code.
+- **`chore(feature name)`**: for other things.
 
 ---
 
@@ -70,7 +75,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 
 ## Learn More
 
