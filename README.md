@@ -7,7 +7,7 @@
 ## Git Branch Rule
 
 - **`main`**: production branch for deploy, **only allow pull request to merge** from `main_dev` branch.
-- **`main_dev`**: development branch for production, **only allow pull request to merge** from `dev_(feature name)` branch or **`fix_(issue name)` branch.
+- **`main_dev`**: development branch for production, **only allow pull request to merge** from `dev_(feature name)` branch or \*\*`fix_(issue name)` branch.
 - **`dev_(feature name)`**: development branch for each feature.
   - For a new feature, create a new branch from `main_dev` branch.
   - When the feature is completed, create a pull request to merge into `main_dev` branch.
@@ -24,6 +24,18 @@ Required extensions: `prettier`, `eslint`
 - We use `prettier` to format our code. Please install `prettier` extension in your editor.
   - You can also use `pnpm format` to format all code.
 - Also, we use `eslint` to check our code. Please install `eslint` extension in your editor.
+
+To format your code, run:
+
+```bash
+pnpm format
+```
+
+To check your code, run:
+
+```bash
+pnpm lint
+```
 
 ## Commit Message Rule
 

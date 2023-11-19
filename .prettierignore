@@ -1,0 +1,32 @@
+# Ignore artifacts:
+build
+coverage
+
+# Ignore all HTML files:
+*.html
+
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+
+# copy of .gitignore
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.*env
+dist
+/.vim/coc-settings.json
+.DS_Store
+
+*cert.json
+*/tags
+
+# lock files
+*yarn.lock
+*package-lock.json
+*pnpm-lock.yaml
+
