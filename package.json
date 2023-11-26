@@ -10,6 +10,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "daisyui": "^4.4.9",
     "next": "14.0.3",
     "pnpm": "^8.10.5",
     "react": "^18",
