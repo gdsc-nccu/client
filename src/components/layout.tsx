@@ -17,10 +17,14 @@ export default function Layout({ children }: { children: ReactElement }) {
       className="flex w-full min-h-screen flex-col items-center justify-between"
       ref={ref}
     >
-      <Header />
-      <main className="border-4 border-blue-500 grow w-full">
-        {width} {height} {children}
-      </main>
+      <Header
+        mainGeometryShow={{
+          width: width,
+          height: height,
+        }}
+        outerRef={ref}
+      />
+      <main className="border-4 border-blue-500 grow w-full">{children}</main>
       {isBreak ? <Footer /> : ""}
     </div>
   );
