@@ -5,9 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  daisyui:
-    specifier: ^4.4.9
-    version: 4.4.9(postcss@8.4.31)
+  classnames:
+    specifier: ^2.3.2
+    version: 2.3.2
+  framer-motion:
+    specifier: ^10.16.5
+    version: 10.16.5(react-dom@18.2.0)(react@18.2.0)
   next:
     specifier: 14.0.3
     version: 14.0.3(react-dom@18.2.0)(react@18.2.0)
@@ -34,6 +37,9 @@ devDependencies:
   autoprefixer:
     specifier: ^10.0.1
     version: 10.4.16(postcss@8.4.31)
+  daisyui:
+    specifier: ^4.4.9
+    version: 4.4.9(postcss@8.4.31)
   eslint:
     specifier: ^8
     version: 8.54.0
@@ -71,6 +77,20 @@ packages:
     dependencies:
       regenerator-runtime: 0.14.0
     dev: true
+
+  /@emotion/is-prop-valid@0.8.8:
+    resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==}
+    requiresBuild: true
+    dependencies:
+      '@emotion/memoize': 0.7.4
+    dev: false
+    optional: true
+
+  /@emotion/memoize@0.7.4:
+    resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==}
+    requiresBuild: true
+    dev: false
+    optional: true
 
   /@eslint-community/eslint-utils@4.4.0(eslint@8.54.0):
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
@@ -617,6 +637,7 @@ packages:
   /camelcase-css@2.0.1:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
+    dev: true
 
   /caniuse-lite@1.0.30001563:
     resolution: {integrity: sha512-na2WUmOxnwIZtwnFI2CZ/3er0wdNzU7hN+cPYz/z2ajHThnkWjNBOpEPP4n+4r2WPM847JaMotaJE3bnfzjyKw==}
@@ -643,6 +664,10 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
+
+  /classnames@2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
+    dev: false
 
   /client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
@@ -682,12 +707,13 @@ packages:
     dependencies:
       cssesc: 3.0.0
       fastparse: 1.1.2
-    dev: false
+    dev: true
 
   /cssesc@3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
     hasBin: true
+    dev: true
 
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
@@ -696,7 +722,7 @@ packages:
   /culori@3.3.0:
     resolution: {integrity: sha512-pHJg+jbuFsCjz9iclQBqyL3B2HLCBF71BwVNujUYEvCeQMvV97R59MNK3R2+jgJ3a1fcZgI9B3vYgz8lzr/BFQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dev: false
+    dev: true
 
   /daisyui@4.4.9(postcss@8.4.31):
     resolution: {integrity: sha512-Wqk1f3rQbiDSMfzC/ZufQQi139dY4mCMZJ/hmYIIGpCi0MFndU0wJ575tEGzi2YrCZOagsWhbOeWE7DD/B5pVw==}
@@ -708,7 +734,7 @@ packages:
       postcss-js: 4.0.1(postcss@8.4.31)
     transitivePeerDependencies:
       - postcss
-    dev: false
+    dev: true
 
   /damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
@@ -1207,7 +1233,7 @@ packages:
 
   /fastparse@1.1.2:
     resolution: {integrity: sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ==}
-    dev: false
+    dev: true
 
   /fastq@1.15.0:
     resolution: {integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==}
@@ -1259,6 +1285,24 @@ packages:
   /fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
     dev: true
+
+  /framer-motion@10.16.5(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-GEzVjOYP2MIpV9bT/GbhcsBNoImG3/2X3O/xVNWmktkv9MdJ7P/44zELm/7Fjb+O3v39SmKFnoDQB32giThzpg==}
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      tslib: 2.6.2
+    optionalDependencies:
+      '@emotion/is-prop-valid': 0.8.8
+    dev: false
 
   /fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
@@ -2041,6 +2085,7 @@ packages:
     dependencies:
       camelcase-css: 2.0.1
       postcss: 8.4.31
+    dev: true
 
   /postcss-load-config@4.0.1(postcss@8.4.31):
     resolution: {integrity: sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA==}
