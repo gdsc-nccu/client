@@ -24,9 +24,10 @@
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
   "files.associations": {
-    "*.css": "tailwindcss"
+    "*.css": "css"
   },
   "editor.quickSuggestions": {
     "strings": "on"
-  }
+  },
+  "editor.tabSize": 2
 }

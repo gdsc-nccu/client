@@ -11,30 +11,21 @@ import classnames from "classnames";
 interface ModalProps {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
-  className: string;
+  className?: string;
   burgerButtonClassName?: string;
   disableBackdropClose: boolean;
   burgerButton?: (value: boolean) => ReactNode;
   children: ReactNode;
 }
 
-// Default props
-const defaultProps: ModalProps = {
-  open: false,
-  setOpen: () => {},
-  className: "",
-  disableBackdropClose: false,
-  children: <div>Burger is yummy!</div>,
-};
-
 const Burger = ({
-  open,
-  setOpen,
-  className,
-  burgerButtonClassName,
-  disableBackdropClose,
-  burgerButton,
-  children,
+  open = false,
+  setOpen = () => {},
+  className = "",
+  burgerButtonClassName = "",
+  disableBackdropClose = false,
+  burgerButton = undefined,
+  children = <div>Burger is yummy!</div>,
 }: ModalProps) => {
   const _handleClose = () => {
     if (!disableBackdropClose) setOpen(false);
@@ -94,7 +85,5 @@ const Burger = ({
     </>
   );
 };
-
-Burger.defaultProps = defaultProps;
 
 export default Burger;

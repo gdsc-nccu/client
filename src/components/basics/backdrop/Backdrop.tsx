@@ -14,11 +14,6 @@ interface BackdropProps {
   className?: string;
 }
 
-// Default props
-const defaultProps: BackdropProps = {
-  children: <></>,
-};
-
 /**
  * An animated Backdrop
  *
@@ -27,7 +22,7 @@ const defaultProps: BackdropProps = {
  * @param className - classes
  *
  */
-const Backdrop = ({ onClick, children, className }: BackdropProps) => {
+const Backdrop = ({ onClick, className, children = <></> }: BackdropProps) => {
   return createPortal(
     <motion.div
       className={classnames("backdrop", className)}
@@ -38,10 +33,8 @@ const Backdrop = ({ onClick, children, className }: BackdropProps) => {
     >
       {children}
     </motion.div>,
-    document.querySelector("body") as HTMLBodyElement
+    document.querySelector("body") as HTMLBodyElement,
   );
 };
-
-Backdrop.defaultProps = defaultProps;
 
 export default Backdrop;
