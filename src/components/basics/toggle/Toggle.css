@@ -1,0 +1,47 @@
+/* .toggle {
+    @apply peer-checked:after:bg-white;
+}
+
+.toggle:after {
+    @apply rounded-full transition-all bg-white absolute;
+}
+
+.toggle-disabled {
+    @apply peer-checked:after:bg-info ;
+}
+
+.toggle-disabled:after {
+    @apply rounded-full transition-all bg-info absolute;
+} */
+/* 
+[data-theme="dark"] .toggle,
+[data-theme="darkpink"] .toggle,
+[data-theme="darkpurple"] .toggle,
+[data-theme="synthwave"] .toggle,
+[data-theme="cyberpunk"] .toggle,
+[data-theme="halloween"] .toggle,
+[data-theme="forest"] .toggle,
+[data-theme="aqua"] .toggle,
+[data-theme="luxury"] .toggle,
+[data-theme="dracula"] .toggle,
+[data-theme="business"] .toggle,
+[data-theme="night"] .toggle,
+[data-theme="coffee"] .toggle {
+    @apply peer-checked:after:bg-info;
+}
+
+[data-theme="dark"] .toggle:after,
+[data-theme="darkpink"] .toggle:after,
+[data-theme="darkpurple"] .toggle:after,
+[data-theme="synthwave"] .toggle:after,
+[data-theme="cyberpunk"] .toggle:after,
+[data-theme="halloween"] .toggle:after,
+[data-theme="forest"] .toggle:after,
+[data-theme="aqua"] .toggle:after,
+[data-theme="luxury"] .toggle:after,
+[data-theme="dracula"] .toggle:after,
+[data-theme="business"] .toggle:after,
+[data-theme="night"] .toggle:after,
+[data-theme="coffee"] .toggle:after {
+    @apply rounded-full transition-all bg-black absolute;
+} */
