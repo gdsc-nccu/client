@@ -1,7 +1,7 @@
+"use client";
 // hooks
 import { StrictMode, useRef } from "react";
-import { useRouter } from "next/router";
-import { useUnitedResize } from "../hooks";
+import { useUnitedResize } from "../../hooks";
 // components
 import Image from "next/image";
 
@@ -10,7 +10,6 @@ export default function Home() {
   // const isLogin = useAppSelector((state) => state.User.isLogin);
   const { width, height, isBreak } = useUnitedResize("mobileBreak", ref);
   // const { login } = useUser();
-  const router = useRouter();
 
   return (
     <main className="flex flex-col items-center justify-between p-24" ref={ref}>

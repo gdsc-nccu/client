@@ -1,6 +1,8 @@
+"use client";
 // hooks
-import { useUnitedResize, useCurrentPath } from "../../hooks";
+import { useUnitedResize } from "../../hooks";
 import { useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 // styles
 import classnames from "classnames";
 // utils
@@ -25,7 +27,6 @@ const StyledLink = ({
       href={href}
       className={classnames(
         "m-2 p-2 px-4 rounded-badge justify-center items-center flex text-xl",
-        "transition-colors duration-300 ease-in-out",
         "tracking-widest",
         // {
         //   "bg-base-100 text-base-content":
@@ -52,7 +53,7 @@ export default function Header({ mainGeometryShow, outerRef }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   // const isLogin = useAppSelector((state) => state.User.isLogin);
   const { width, height, isBreak } = useUnitedResize("mobileBreak", ref);
-  const pathname = useCurrentPath();
+  const pathname = usePathname();
 
   const [showGeometry, setShowGeometry] = useState(false);
   const [burgerOpen, setBurgerOpen] = useState(false);
@@ -85,16 +86,18 @@ export default function Header({ mainGeometryShow, outerRef }: Props) {
             burgerButton={(open) => <Icon icon="fe:bar" className="text-3xl" />}
             setOpen={setBurgerOpen}
             burgerButtonClassName="w-12 flex justify-center items-center"
-            className={classnames(
-              { "bg-base-content text-base-100": pathname !== "profile" },
-              { "bg-base-100 text-base-content": pathname === "profile" },
-            )}
+            // className={classnames(
+            //   { "bg-base-content text-base-100": pathname !== "profile" },
+            //   { "bg-base-100 text-base-content": pathname === "profile" },
+            // )}
             disableBackdropClose={false}
           >
             <Toggle
               checked={toggle01}
               onChange={() => setToggle01((prev) => !prev)}
-            />
+            >
+              eee
+            </Toggle>
           </Burger>
           <div className="header-links grow justify-center flex">
             <DevGroup />
@@ -128,7 +131,7 @@ export default function Header({ mainGeometryShow, outerRef }: Props) {
               社團表單
             </StyledLink>
             <StyledLink href="/">
-              <Icon className="text-3xl" icon="fe:home" />
+              <Icon icon="fe:home" className="text-3xl" />
             </StyledLink>
             <DevGroup />
           </div>

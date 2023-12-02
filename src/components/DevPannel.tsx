@@ -5,21 +5,20 @@ import { Icon } from "@iconify/react";
 import { useState } from "react";
 
 interface Props {
+  mainGeometryShow?: {
+    width: number;
+    height: number;
+  };
   anchorRef: React.MutableRefObject<HTMLDivElement | null>;
 }
 
-// Default props
-const defaultProps: Props = {
-  anchorRef: { current: null },
-};
-
-const DevUtils = ({ anchorRef }: Props) => {
+const DevUtils = ({ anchorRef = { current: null } }: Props) => {
   const [open, setOpen] = useState(false);
   return (
     <>
       {process.env.NODE_ENV === "development" && (
         <button onClick={() => setOpen(true)}>
-          <Icon icon="mdi:wrench" className="text-2xl text-base-300" />
+          <Icon icon="fe:wrench" className="text-3xl" />
         </button>
       )}
       <Modal
@@ -27,7 +26,7 @@ const DevUtils = ({ anchorRef }: Props) => {
         anchorRef={anchorRef}
         handleClose={() => setOpen(false)}
         disableBackdropClose={false}
-        className="w-[80vw] h-[80vh] bg-gray-800"
+        className="w-[80vw] h-[80vh] bg-base-100 text-base-content"
         upward={false}
         loading={false}
       >
