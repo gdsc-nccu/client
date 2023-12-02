@@ -21,10 +21,6 @@ const StyledLink = ({
       className={classnames(
         "m-2 p-2 px-4 rounded-badge justify-center items-center flex text-xl",
         "tracking-widest",
-        // {
-        //   "bg-base-100 text-base-content":
-        //     variant !== "selected" && variant !== "icon",
-        // },
         { "bg-primary text-primary-content": variant === "selected" },
         { "": variant === "icon" },
         className,

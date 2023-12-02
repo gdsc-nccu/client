@@ -1,24 +1,23 @@
 .clip {
   position: fixed;
   z-index: 2;
-  top: 2rem;
-  right: 2.25rem;
+  top: 3.75rem;
+  right: 4.25rem;
   width: 0rem;
   height: 0rem;
   border-radius: 100%;
-  /* border: 4px solid green; */
+  border: 4px solid green;
 }
 
 .clip-open {
   @apply bg-base-200;
-  /* border: 4px solid red; */
   animation: open 1000ms ease-in;
 }
 
 @keyframes open {
   0% {
-    top: 2rem;
-    right: 2.25rem;
+    top: 3.75rem;
+    right: 4.25rem;
     width: 0rem;
     height: 0rem;
     clip-path: circle(0rem at center);
@@ -26,8 +25,8 @@
   }
 
   60% {
-    top: calc(-150vmax + 2rem);
-    right: calc(-150vmax + 2.25rem);
+    top: calc(-150vmax + 3.75rem);
+    right: calc(-150vmax + 4.25rem);
     width: 300vmax;
     height: 300vmax;
     clip-path: circle(300vmax at center);
@@ -35,8 +34,8 @@
   }
 
   100% {
-    top: calc(-150vmax + 2rem);
-    right: calc(-150vmax + 2.25rem);
+    top: calc(-150vmax + 3.75rem);
+    right: calc(-150vmax + 4.25rem);
     width: 300vmax;
     height: 300vmax;
     clip-path: circle(300vmax at center);

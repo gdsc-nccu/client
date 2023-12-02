@@ -37,21 +37,22 @@ export default function Header({ mainGeometryShow, outerRef }: Props) {
   return (
     <header
       className={classnames(
-        "flex flex-row w-full items-center justify-between h-16",
+        "flex flex-row w-full items-center justify-between",
         "transition-colors duration-200 ease-in-out",
         isBreak
-          ? ["bg-base-300 text-base-content"]
+          ? ["bg-base-300 text-base-content h-16"]
           : [
               { "bg-base-100 text-base-content": pathname !== "/profile" },
               {
                 "bg-base-200 text-base-content delay-500":
                   pathname === "/profile",
               },
+              "h-32 px-8",
             ],
       )}
       ref={ref}
     >
-      <div className="flex w-full justify-between h-16 z-10">
+      <div className="flex w-full justify-between h-full z-10">
         {isBreak ? (
           <>
             <HeaderBurger />
