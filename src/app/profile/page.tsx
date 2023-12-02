@@ -4,15 +4,17 @@ import { StrictMode, useRef } from "react";
 import { useUnitedResize } from "../../hooks";
 // components
 import Image from "next/image";
+// styles
+import classnames from "classnames";
 
-export default function Home() {
+export default function Profile() {
   const ref = useRef<HTMLDivElement>(null);
   // const isLogin = useAppSelector((state) => state.User.isLogin);
   const { width, height, isBreak } = useUnitedResize("mobileBreak", ref);
   // const { login } = useUser();
 
   return (
-    <main className="flex flex-col items-center justify-between p-24" ref={ref}>
+    <main className={classnames("h-full w-full")} ref={ref}>
       <StrictMode>
         <div className="px-5">
           <header className="flex items-center justify-between"></header>
