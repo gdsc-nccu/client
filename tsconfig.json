@@ -19,7 +19,7 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/app/*"]
+      "@/*": ["./src/app/*", "./src/assets/*"]
     }
   },
   "include": [
@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "**/*.css"
+    "**/*.css",
+    "**/*.json"
   ],
   "exclude": ["node_modules"]
 }
