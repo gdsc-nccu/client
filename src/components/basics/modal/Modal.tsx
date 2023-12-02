@@ -26,20 +26,6 @@ interface ModalProps {
   };
 }
 
-// Default props
-const defaultProps: ModalProps = {
-  open: false,
-  className: "",
-  anchorRef: { current: null },
-  handleClose: () => {},
-  disableBackdropClose: false,
-  children: {
-    header: () => null,
-    body: () => null,
-    footer: () => null,
-  },
-};
-
 const dropIn = {
   hidden: {
     y: "-100vh",
@@ -75,30 +61,19 @@ const dropInUpward = {
     y: "100vh",
   },
 };
-
-/**
- * Basic Modal
- *
- * @param open - Modal is open or not.
- * @param className - ClassName pass to modal, useful if you want to change shape or position.
- * @param handleClose - Function triggers when modal close.
- * @param disableBackdropClose - Disable close when click backdrop, default is false.
- * @param upward - Modal will open upward, default is false.
- * @param loading - Loading status of the modal, default is false.
- * @param children.header - Header component of the modal.
- * @param children.body - Body component of the modal
- * @param children.footer - Footer component of the modal
- *
- */
 const Modal = ({
-  open,
-  className,
-  handleClose,
-  anchorRef,
-  disableBackdropClose,
-  loading,
-  upward,
-  children,
+  open = false,
+  className = "",
+  handleClose = () => {},
+  anchorRef = { current: null },
+  disableBackdropClose = false,
+  loading = false,
+  upward = false,
+  children = {
+    header: () => null,
+    body: () => null,
+    footer: () => null,
+  },
 }: ModalProps) => {
   const dragControls = useDragControls();
   const { isBreak } = useUnitedResize("mobileBreak", anchorRef);
@@ -158,7 +133,7 @@ const Modal = ({
                       : "modal-mobile drag-padding"
                     : "modal"
                 } ${className}`,
-                "transition-[height] duration-300 ease-in-out",
+                "transition-[height] duration-200 ease-in-out",
               )}
               variants={upward ? dropInUpward : dropIn}
               initial="hidden"
@@ -193,7 +168,5 @@ const Modal = ({
     </AnimatePresence>
   );
 };
-
-Modal.defaultProps = defaultProps;
 
 export default Modal;

@@ -3,7 +3,6 @@
 // Styles
 import React, { ChangeEventHandler } from "react";
 import classnames from "classnames";
-import "./Toggle.css";
 // Utils
 
 // Props type defination
@@ -21,36 +20,21 @@ interface Props {
   disabled?: boolean;
 }
 
-// Default props
-const defaultProps: Props = {
-  children: "",
-  checked: false,
-  onChange: () => {},
-  size: "md",
-  color: "success",
-  defaultColor: "base-300",
-  circleColor: "white",
-  disabledColor: "base-300",
-  labelClassName: "",
-  togglePosition: "right",
-  disabled: false,
-};
-
 /**
  * Toggle component
  */
 const Toggle = ({
-  children,
-  checked,
-  onChange,
-  size,
-  color,
-  defaultColor,
-  circleColor,
-  disabledColor,
-  labelClassName,
-  togglePosition,
-  disabled,
+  children = "",
+  checked = false,
+  onChange = () => {},
+  size = "md",
+  color = "success",
+  defaultColor = "base-300",
+  circleColor = "base-100",
+  disabledColor = "base-100",
+  labelClassName = "",
+  togglePosition = "right",
+  disabled = false,
 }: Props): JSX.Element => {
   const childContainer = () => {
     return (
@@ -65,7 +49,7 @@ const Toggle = ({
               "text-lg": size === "md",
               "text-xl": size === "lg",
               "text-2xl": size === "xl",
-            }
+            },
           )}
         >
           {children}
@@ -79,7 +63,7 @@ const Toggle = ({
       className={classnames(
         "relative flex items-center justify-center",
         disabled ? "cursor-not-allowed" : "cursor-pointer",
-        labelClassName
+        labelClassName,
       )}
     >
       {togglePosition === "right" && childContainer()}
@@ -102,7 +86,7 @@ const Toggle = ({
             "h-8 w-[3.75rem] min-w-[3.75rem]": size === "lg",
             "h-9 w-[4.25rem] min-w-[4.25rem]": size === "xl",
           },
-          "transition-colors"
+          "transition-colors",
         )}
       >
         <div
@@ -112,23 +96,23 @@ const Toggle = ({
             checked
               ? disabled
                 ? `bg-${disabledColor} border border-${circleColor}`
-                : `bg-${circleColor} `
+                : `bg-${circleColor}`
               : disabled
-              ? `bg-${disabledColor} border border-${circleColor}`
-              : `bg-${circleColor} `,
+                ? `bg-${disabledColor} border border-${circleColor}`
+                : `bg-${circleColor}`,
             {
               "left-0.5 top-0.5 h-4 w-4": size === "xs",
               "left-0.5 top-0.5 h-5 w-5": size === "sm",
               "left-0.5 top-0.5 h-6 w-6": size === "md",
               "left-0.5 top-0.5 h-7 w-7": size === "lg",
               "left-0.5 top-0.5 h-8 w-8": size === "xl",
-            }
+            },
           )}
         ></div>
         <div
           className={classnames(
             "relative h-full w-full rounded-full transition-opacity",
-            disabled ? `opacity-50 bg-${disabledColor}` : `opacity-0`
+            disabled ? `opacity-50 bg-${disabledColor}` : `opacity-0`,
           )}
         ></div>
       </div>
@@ -136,7 +120,5 @@ const Toggle = ({
     </label>
   );
 };
-
-Toggle.defaultProps = defaultProps;
 
 export default Toggle;

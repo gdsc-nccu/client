@@ -20,9 +20,6 @@ interface BackdropProps {
 }
 
 // Default props
-const defaultProps: BackdropProps = {
-  open: false,
-};
 
 /**
  * An animated Backdrop
@@ -33,7 +30,7 @@ const defaultProps: BackdropProps = {
  *
  */
 const IntroBackdrop = ({
-  open,
+  open = false,
   onClick,
   children,
   className,
@@ -55,7 +52,7 @@ const IntroBackdrop = ({
           <motion.div
             className={classnames(
               "absolute z-10 h-full w-full bg-[#00000088]",
-              backdropClassName
+              backdropClassName,
             )}
             onClick={onClick}
             initial={{ opacity: 0 }}
@@ -70,7 +67,5 @@ const IntroBackdrop = ({
     </div>
   );
 };
-
-IntroBackdrop.defaultProps = defaultProps;
 
 export default IntroBackdrop;
