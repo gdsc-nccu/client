@@ -17,7 +17,7 @@ const DevUtils = ({ anchorRef = { current: null } }: Props) => {
   return (
     <>
       {process.env.NODE_ENV === "development" && (
-        <button onClick={() => setOpen(true)}>
+        <button className="w-12" onClick={() => setOpen(true)}>
           <Icon icon="fe:wrench" className="text-3xl" />
         </button>
       )}
