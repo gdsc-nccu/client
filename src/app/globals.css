@@ -1,6 +1,10 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+@layer base {
+  :root {
+    --doc-height: 100%;
+  }
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -25,3 +29,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@tailwind components;
+@tailwind utilities;

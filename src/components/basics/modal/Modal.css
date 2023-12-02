@@ -1,0 +1,49 @@
+.modal-base {
+  @apply rounded-box m-auto flex flex-col gap-2 bg-base-100 p-8 shadow-2xl sm:h-[calc(var(--doc-height)_*_0.9)] sm:w-[70vw];
+}
+
+.modal {
+  @apply h-[calc(var(--doc-height)_*_0.95)] w-[90vw];
+}
+
+.modal-mobile {
+  @apply h-[calc(var(--doc-height)_*_0.9)] !w-screen rounded-t-none pb-2;
+}
+
+.modal-mobile-upward {
+  @apply h-[calc(var(--doc-height)_*_0.4)] !w-screen rounded-b-none pt-2;
+}
+
+.modal-body {
+  @apply grow overflow-hidden;
+}
+
+.modal-header {
+  @apply max-w-full shrink-0;
+}
+
+.modal-footer {
+  @apply flex shrink-0 justify-end gap-2;
+}
+
+.drag-padding {
+  @apply relative;
+}
+
+.drag-padding::before {
+  @apply absolute w-full bg-base-100;
+  /* background-color: #fff; */
+  content: " ";
+  height: 100vh;
+  bottom: calc(100% - 5px);
+  left: 0%;
+}
+
+.drag-padding-upward::after {
+  @apply absolute w-full bg-base-100;
+  /* background-color: #fff; */
+  content: " ";
+  height: 100vh;
+  top: calc(100% - 5px);
+  left: 0%;
+}
