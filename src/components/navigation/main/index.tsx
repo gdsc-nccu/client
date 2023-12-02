@@ -18,10 +18,15 @@ export default function Main({ children }: { children: React.ReactNode }) {
         "transition-colors duration-200 ease-in-out",
         "h-[calc(100vh_-_4rem)]",
         // isBreak ? "h-[calc(100vh_-_7.5rem)]" : "h-[calc(100vh_-_4rem)]",
-        { "bg-base-100 text-base-content": pathname !== "/profile" },
-        {
-          "bg-base-200 text-base-content delay-500": pathname === "/profile",
-        },
+        isBreak
+          ? ["bg-base-300 text-base-content"]
+          : [
+              { "bg-base-100 text-base-content": pathname !== "/profile" },
+              {
+                "bg-base-200 text-base-content delay-500":
+                  pathname === "/profile",
+              },
+            ],
       )}
       ref={ref}
     >
