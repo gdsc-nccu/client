@@ -15,7 +15,7 @@ interface ModalProps {
   burgerButtonClassName?: string;
   disableBackdropClose: boolean;
   burgerButton?: (value: boolean) => ReactNode;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 const Burger = ({
@@ -53,7 +53,7 @@ const Burger = ({
           >
             <motion.div
               className={classnames(
-                "flex flex-col justify-center items-center",
+                "flex flex-col",
                 "w-2/3 h-full",
                 "bg-base-100 text-base-content",
                 "overflow-hidden",

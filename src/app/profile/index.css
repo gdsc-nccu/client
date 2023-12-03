@@ -1,0 +1,17 @@
+.profile-open {
+  animation: profile-open 500ms ease-in;
+}
+
+@keyframes profile-open {
+  0% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

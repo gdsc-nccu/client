@@ -3,9 +3,11 @@
 import { StrictMode, useRef } from "react";
 import { useUnitedResize } from "../../hooks";
 // components
+import UserIcon from "../../assets/icon/user";
 import Image from "next/image";
 // styles
 import classnames from "classnames";
+import "./index.css";
 
 export default function Profile() {
   const ref = useRef<HTMLDivElement>(null);
@@ -14,17 +16,21 @@ export default function Profile() {
   // const { login } = useUser();
 
   return (
-    <main className={classnames("h-full w-full")} ref={ref}>
-      <StrictMode>
-        <div className="px-5">
-          <header className="flex items-center justify-between"></header>
+    <main
+      className={classnames("h-full w-full", { "profile-open": !isBreak })}
+      ref={ref}
+    >
+      <div className="w-full flex justify-center items-center">
+        <div className="border-4 border-base-content rounded-full justify-center items-center p-6">
+          <UserIcon
+            style={{
+              width: "256px",
+              height: "256px",
+              strokeWidth: "0.4px",
+            }}
+          />
         </div>
-        <div className="min-h-0 grow">
-          Profile
-          {width} {height}
-        </div>
-        {isBreak ? <div>mobile navigation</div> : ""}
-      </StrictMode>
+      </div>
     </main>
   );
 }
