@@ -11,6 +11,9 @@ import Main from "../components/navigation/main";
 import { Inter } from "next/font/google";
 import classnames from "classnames";
 import "./globals.css";
+import { getServerSession } from "next-auth";
+import Login from "../components/Login";
+import Logout from "../components/Logout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,13 +25,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   // const isLogin = useAppSelector((state) => state.User.isLogin);
   // const pathname = usePathname();
+
+  const session = await getServerSession();
 
   return (
     <html lang="en">
@@ -40,9 +45,19 @@ export default function RootLayout({
               "flex w-full h-full min-h-screen flex-col items-center justify-between",
             )}
           >
-            <Header />
-            <Main>{children}</Main>
-            {/* <Footer /> */}
+            {session && (
+              <>
+                <Header />
+                <Logout />
+                <Main>{children}</Main>
+                {/* <Footer /> */}
+              </>
+            )}
+            {!session && (
+              <>
+                <Login />
+              </>
+            )}
           </div>
         </body>
       </StrictMode>
