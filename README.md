@@ -74,6 +74,26 @@ We use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) / 
 
 ## Getting Started
 
+### Setup
+
+Install all dependencies and packages before develop.
+
+```bash
+pnpm install
+```
+
+Add below environment variables to `.env` file in the root folder.
+
+```env
+NEXT_PUBLIC_GOOGLE_AUTH_CLIENT_ID=[GOOGLE_AUTH_CLIENT_ID]
+NEXT_PUBLIC_GOOGLE_AUTH_CLIENT_SECRET=[GOOGLE_AUTH_CLIENT_SECRET]
+
+NEXTAUTH_URL=[CANONICAL_URL]
+NEXTAUTH_SECRET=[DEFAULT_SECRET]
+```
+
+### Development Server
+
 First, run the development server:
 
 ```bash
