@@ -40,7 +40,7 @@ export default function Header({ mainGeometryShow, outerRef }: Props) {
         "flex flex-row w-full items-center justify-between",
         "transition-colors duration-200 ease-in-out",
         isBreak
-          ? ["bg-base-300 text-base-content h-16"]
+          ? ["bg-accent text-base-content h-16"]
           : [
               { "bg-base-100 text-base-content": pathname !== "/profile" },
               {
