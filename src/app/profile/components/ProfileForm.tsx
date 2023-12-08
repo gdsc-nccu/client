@@ -2,6 +2,7 @@
 
 import { useFormState, useFormStatus } from "react-dom";
 import InputModal from "./InputModal";
+import updateUser from "../updateUser";
 
 type ProfileFormType = {
   name: string;
@@ -12,7 +13,7 @@ type ProfileFormType = {
 
 const ProfileForm = ({ user }: { user: ProfileFormType }) => {
   const { pending } = useFormStatus();
-  const [, formAction] = useFormState(() => {}, null);
+  const [, formAction] = useFormState(updateUser, null);
 
   return (
     <form action={formAction} className="flex flex-col mt-8 space-y-4">
