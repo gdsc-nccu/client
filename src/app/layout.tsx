@@ -48,7 +48,6 @@ export default async function RootLayout({
             {session && (
               <>
                 <Header />
-                <Logout />
                 <Main>{children}</Main>
                 {/* <Footer /> */}
               </>
