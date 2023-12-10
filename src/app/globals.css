@@ -35,3 +35,7 @@ body {
   src: url(../font/ProductSans-Bold.ttf) format("ttf");
   src: url(../font/ProductSans-Bold.woff) format("woff");
 }
+
+.use-product-sans {
+  font-family: 'Product Sans', sans-serif;
+}

@@ -8,14 +8,14 @@ import Header from "../components/navigation/header";
 import Main from "../components/navigation/main";
 // import Footer from "../components/navigation/footer";
 // styles
-import { Inter } from "next/font/google";
+import { Noto_Sans_TC } from "next/font/google";
 import classnames from "classnames";
 import "./globals.css";
 import { getServerSession } from "next-auth";
 import Login from "../components/Login";
 import Logout from "../components/Logout";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Noto_Sans_TC({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "GDSC NCCU Member Website",
@@ -43,12 +43,12 @@ export default async function RootLayout({
           <div
             className={classnames(
               "flex w-full h-full min-h-screen flex-col items-center justify-between",
+              "bg-base-100",
             )}
           >
             {session && (
               <>
                 <Header />
-                <Logout />
                 <Main>{children}</Main>
                 {/* <Footer /> */}
               </>

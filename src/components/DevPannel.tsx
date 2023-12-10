@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react";
 import React from "react";
 // hooks
 import { useState } from "react";
+import Accordion from "./basics/accordion/Accordion";
 
 interface Props {
   mainGeometryShow?: {
@@ -15,6 +16,9 @@ interface Props {
 
 const DevUtils = ({ anchorRef = { current: null } }: Props) => {
   const [open, setOpen] = useState(false);
+
+  const [fontAccordion, setFontAccordion] = useState(true);
+
   return (
     <>
       {process.env.NODE_ENV === "development" && (
@@ -32,8 +36,42 @@ const DevUtils = ({ anchorRef = { current: null } }: Props) => {
         loading={false}
       >
         {{
-          header: () => <div className="h2">Dev Pannel</div>,
-          body: () => <div>body</div>,
+          header: () => <div className="p-2 text-2xl">Dev Pannel</div>,
+          body: () => (
+            <div className="h-[60vh]">
+              <Accordion
+                open={fontAccordion}
+                setOpen={setFontAccordion}
+                customArrow={(isOpen) => {
+                  return (
+                    <Icon
+                      style={{
+                        transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                        transition: "transform 0.15s ease-in-out",
+                      }}
+                      icon="mdi:chevron-up"
+                      className="texl-4xl m-1 h-6 w-6"
+                    />
+                  );
+                }}
+                className="border-2 border-base-content rounded-lg p-2"
+              >
+                {{
+                  header: () => <div className="text-xl">Font</div>,
+                  body: () => (
+                    <div className="p-2 grid grid-cols-2">
+                      <p className="">Normal (Noto Sans TC)</p>
+                      <p className="font-bold">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                      <p>Product Sans</p>
+                      <p className="use-product-sans">
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                      </p>
+                    </div>
+                  ),
+                }}
+              </Accordion>
+            </div>
+          ),
           footer: () => <div>footer</div>,
         }}
       </Modal>
