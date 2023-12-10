@@ -5,10 +5,10 @@ import { useState } from "react";
 import classnames from "classnames";
 // utils
 import Link from "next/link";
-import IconLinkArray from "../../../assets/icon-link.json";
+import IconLinkArray from "../../../../assets/icon-link.json";
 // components
 import { Icon } from "@iconify/react";
-import { Burger } from "../../basics";
+import { Burger } from "../../../basics";
 
 interface Props {}
 
