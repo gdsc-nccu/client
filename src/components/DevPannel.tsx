@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 import React from "react";
 // hooks
 import { useState } from "react";
-import Accordion from "./basics/accordion/Accordion";
+import { Accordion } from "../components/basics";
 
 interface Props {
   mainGeometryShow?: {
