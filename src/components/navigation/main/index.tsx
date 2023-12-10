@@ -22,7 +22,7 @@ export default function Main({ children }: { children: React.ReactNode }) {
         "transition-colors duration-200 ease-in-out",
         isBreak ? "h-[calc(100vh_-_4rem)]" : "h-[calc(100vh_-_8rem)]",
         isBreak
-          ? ["bg-base-300 text-base-content"]
+          ? ["bg-accent text-base-content"]
           : [
               { "bg-base-100 text-base-content": pathname !== "/profile" },
               {
