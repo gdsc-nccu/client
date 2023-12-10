@@ -1,4 +1,6 @@
 "use client";
+// utils
+import React from "react";
 // hooks
 import { StrictMode, useRef } from "react";
 import { useUnitedResize } from "../../hooks";

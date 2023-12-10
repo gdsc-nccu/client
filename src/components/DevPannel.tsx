@@ -1,6 +1,7 @@
 // component
 import { Modal } from "./basics";
 import { Icon } from "@iconify/react";
+import React from "react";
 // hooks
 import { useState } from "react";
 

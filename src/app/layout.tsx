@@ -1,6 +1,6 @@
 // "use client";
 // utils
-import { StrictMode } from "react";
+import React, { StrictMode } from "react";
 import type { Metadata } from "next";
 // hooks
 // components

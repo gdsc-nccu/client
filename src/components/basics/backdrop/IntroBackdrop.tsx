@@ -3,7 +3,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 // Styles
 import classnames from "classnames";
-// Utils
+// utils
+import React from "react";
 
 // Props type defination
 interface BackdropProps {
