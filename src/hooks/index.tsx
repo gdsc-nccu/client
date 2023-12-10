@@ -1,3 +1,4 @@
 import { useResize, useUnitedResize } from "./useResize";
+import usePrevious from "./usePrevious";
 
-export { useResize, useUnitedResize };
+export { useResize, useUnitedResize, usePrevious };
