@@ -1,0 +1,13 @@
+.main-loading {
+  animation: main-loading 1s ease-in-out;
+}
+
+@keyframes main-loading {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

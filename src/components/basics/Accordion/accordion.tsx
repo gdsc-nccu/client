@@ -6,7 +6,8 @@ import { ReactNode } from "react";
 import { Icon } from "@iconify/react";
 // Styles
 import classnames from "classnames";
-// Utils
+// utils
+import React from "react";
 
 // Props type defination
 interface AccordionProps {

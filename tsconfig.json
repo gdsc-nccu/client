@@ -19,7 +19,13 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/app/*", "./src/assets/*"]
+      "@/*": [
+        "./src/app/*",
+        "./src/assets/*",
+        "./src/components/*",
+        "./src/hooks/*",
+        "./src/types/*"
+      ]
     }
   },
   "include": [
@@ -28,7 +34,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "**/*.css",
-    "**/*.json"
+    "**/*.json",
+    "**/*.png"
   ],
   "exclude": ["node_modules"]
 }

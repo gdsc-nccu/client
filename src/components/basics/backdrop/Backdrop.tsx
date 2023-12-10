@@ -5,7 +5,8 @@ import { createPortal } from "react-dom";
 // Styles
 import "./Backdrop.css";
 import classnames from "classnames";
-// Utils
+// utils
+import React from "react";
 
 // Props type defination
 interface BackdropProps {

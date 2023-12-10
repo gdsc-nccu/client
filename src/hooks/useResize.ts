@@ -1,13 +1,14 @@
 "use client";
+// hooks
 import React, { useEffect, useState } from "react";
 
 export const resizeOption = {
-  mobileBreak: 800,
+  mobileBreak: 900,
 } as { [key: string]: number };
 
 export const useResize = (elementRef: React.RefObject<HTMLElement>) => {
-  const [width, setWidth] = useState<number>(0);
-  const [height, setHeight] = useState<number>(0);
+  const [width, setWidth] = useState<number | undefined>(undefined);
+  const [height, setHeight] = useState<number | undefined>(undefined);
 
   const handleChange = () => {
     if (elementRef) {
@@ -32,6 +33,7 @@ export const useResize = (elementRef: React.RefObject<HTMLElement>) => {
   });
 
   const breakDecider = (_width: number) => {
+    if (!width) return undefined;
     return width < _width;
   };
 

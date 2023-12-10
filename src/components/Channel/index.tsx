@@ -1,5 +1,7 @@
+// utils
+import React from "react";
 // components
-import GDSCBracketWhite from "@/icon/gdsc-bracket-white";
+import GDSCBracketWhite from "../../assets/icon/gdsc-bracket-white";
 // styles
 import classnames from "classnames";
 import "./index.css";
