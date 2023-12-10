@@ -1,38 +1,48 @@
-"use client";
-// utils
-import React from "react";
-// hooks
-import { StrictMode, useRef } from "react";
-import { useUnitedResize } from "../../hooks";
 // components
-import UserIcon from "../../assets/icon/user";
+import UserIcon from "@/icon/user";
 import Image from "next/image";
 // styles
-import classnames from "classnames";
 import "./index.css";
+// utils
+import { getServerSession } from "next-auth";
+import { fetchUser } from "./fetchUser";
+import ProfileForm from "./components/ProfileForm";
+import Role from "./components/Role";
 
-export default function Profile() {
-  const ref = useRef<HTMLDivElement>(null);
-  // const isLogin = useAppSelector((state) => state.User.isLogin);
-  const { width, height, isBreak } = useUnitedResize("mobileBreak", ref);
-  // const { login } = useUser();
+export default async function Profile() {
+  const session = await getServerSession();
+  // const user = await fetchUser(session!.user!.email as string)
+  const user = await fetchUser("sample@email.com");
 
   return (
-    <main
-      className={classnames("h-full w-full", { "profile-open": !isBreak })}
-      ref={ref}
-    >
-      <div className="w-full flex justify-center items-center">
-        <div className="border-4 border-base-content rounded-full justify-center items-center p-6">
-          <UserIcon
-            style={{
-              width: "256px",
-              height: "256px",
-              strokeWidth: "0.4px",
-            }}
+    <div className="">
+      <div className="w-full h-max flex justify-center items-center space-x-6 md:space-x-28">
+        {session?.user?.image ? (
+          <Image
+            src={session.user.image.replace("s96-c", "w400-c")}
+            alt=""
+            width={200}
+            height={200}
+            className="rounded-full w-24 md:w-52"
           />
-        </div>
+        ) : (
+          <UserIcon width={200} height={200} />
+        )}
+        <Role
+          name={user.name}
+          role={user.role}
+          payment={user.payment}
+          paid={user.paid}
+        />
       </div>
-    </main>
+      <ProfileForm
+        user={{
+          name: user.name,
+          phone: "",
+          studentId: user.student_id,
+          major: user.major_n_grade,
+        }}
+      />
+    </div>
   );
 }
