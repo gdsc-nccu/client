@@ -1,0 +1,9 @@
+.desktop-home-title {
+  letter-spacing: 0.5rem;
+  /* transform: translateX(-1rem); */
+}
+
+.desktop-home-title>.bg-desktop-home-title {
+  background-position-x: -5rem;
+  background-size: calc(100% + 5rem), 100%;
+}
