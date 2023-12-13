@@ -15,6 +15,7 @@ interface ChannelProps {
   showTitle?: boolean;
   classNameContainer?: string;
   classNameChannel?: string;
+  glitch?: boolean;
 }
 
 const Channel = ({
@@ -22,6 +23,7 @@ const Channel = ({
   showTitle,
   classNameContainer,
   classNameChannel,
+  glitch = false,
 }: ChannelProps) => {
   return (
     <div
@@ -38,54 +40,44 @@ const Channel = ({
               classNameChannel,
             )}
           >
-            {channel.link === undefined ? (
-              <div
-                className={classnames(
-                  "h-full w-full relative",
-                  "flex flex-col spaxe-y-1 justify-center items-center opacity-60",
-                )}
-              >
-                {/* <p className="absolute top-2 left-3">{index}</p> */}
-                <GDSCBracketWhite className="text-4xl" />
-                <p className="text-2xl use-product-sans font-bold tracking-wider">
-                  No Sinal
-                </p>
-              </div>
-            ) : (
-              <>
-                <Link className="h-full w-full relative" href={channel.link}>
-                  {channel.preview ? (
-                    <Image
-                      src={channel.preview}
-                      alt={
-                        (channel.title ? channel.title : "No Title") +
-                        " preview"
-                      }
-                      width={2000}
-                      height={2000}
-                      className="rounded-3xl w-full h-full"
-                    />
-                  ) : (
-                    <div
-                      className={classnames(
-                        "h-full w-full relative",
-                        "flex flex-col spaxe-y-1 justify-center items-center opacity-60",
-                      )}
-                    >
-                      {/* <p className="absolute top-2 left-3">{index}</p> */}
-                      <GDSCBracketWhite className="text-4xl" />
-                      <p className="text-2xl use-product-sans font-bold tracking-wider">
-                        No Sinal
-                      </p>
-                    </div>
+            <Link
+              className="h-full w-full relative"
+              href={
+                channel.link === undefined
+                  ? "./sharedprojects/nosignal"
+                  : channel.link
+              }
+            >
+              {channel.preview ? (
+                <Image
+                  src={channel.preview}
+                  alt={
+                    (channel.title ? channel.title : "No Title") + " preview"
+                  }
+                  width={2000}
+                  height={2000}
+                  className="rounded-3xl w-full h-full"
+                />
+              ) : (
+                <div
+                  className={classnames(
+                    "h-full w-full relative",
+                    "flex flex-col spaxe-y-1 justify-center items-center opacity-60",
+                    { "no-signal-glitch": glitch },
                   )}
-                </Link>
-              </>
-            )}
+                >
+                  {/* <p className="absolute top-2 left-3">{index}</p> */}
+                  <GDSCBracketWhite className="text-4xl" />
+                  <p className="text-2xl use-product-sans font-bold tracking-wider">
+                    No Signal
+                  </p>
+                </div>
+              )}
+            </Link>
           </div>
           {showTitle && (
             <p className="text-2xl use-product-sans font-bold tracking-wider flex justify-center m-2">
-              {channel.title}
+              {channel.title ? channel.title : "No signal"}
             </p>
           )}
         </div>

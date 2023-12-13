@@ -16,7 +16,7 @@ const Home = () => {
 
   const noteArray: Channel[] = [
     {
-      title: "No sinal",
+      title: "No signal",
     },
     {},
     {},
@@ -26,8 +26,8 @@ const Home = () => {
   ];
   const shardProjectArray = [
     {
-      title: "No sinal",
-      link: "./sharedprojects/nosinal",
+      title: "No signal",
+      link: "./sharedprojects/nosignal",
       description: "test project",
     },
     {},
