@@ -1,0 +1,79 @@
+.desktop-home-title {
+  letter-spacing: 0.5rem;
+  /* transform: translateX(-1rem); */
+}
+
+.desktop-home-title>.bg-desktop-home-title {
+  background-position-x: -5rem;
+  background-size: calc(100% + 5rem), 100%;
+}
+
+.no-signal-glitch {
+  animation: ese-glitch 5s infinite;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+@keyframes ese-glitch {
+  0% {
+    transform: none;
+  }
+
+  12% {
+    transform: none;
+  }
+
+  12.3% {
+    filter: hue-rotate(0deg);
+    transform: skewX(3deg);
+  }
+
+  12.6% {
+    filter: hue-rotate(90deg);
+    transform: skewX(-3deg);
+  }
+
+  12.9% {
+    filter: hue-rotate(0deg);
+    transform: none;
+  }
+
+  40% {
+    transform: none;
+  }
+
+  40.3% {
+    filter: hue-rotate(0deg);
+    transform: skewX(3deg);
+  }
+
+  40.6% {
+    filter: hue-rotate(90deg);
+    transform: skewX(-3deg);
+  }
+
+  40.9% {
+    filter: hue-rotate(0deg);
+    transform: none;
+  }
+
+  45% {
+    transform: none;
+  }
+
+  45.3% {
+    filter: hue-rotate(0deg);
+    transform: skewX(3deg);
+  }
+
+  45.6% {
+    filter: hue-rotate(90deg);
+    transform: skewX(-5deg);
+  }
+
+  45.9% {
+    filter: hue-rotate(0deg);
+    transform: none;
+  }
+}

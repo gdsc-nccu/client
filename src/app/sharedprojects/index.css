@@ -1,0 +1,4 @@
+.basic-content {
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 75% 25%;
+}

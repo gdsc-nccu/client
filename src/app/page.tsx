@@ -5,25 +5,19 @@ import React from "react";
 import { useContext } from "react";
 import { BreakPointRecoder } from "../components/navigation/main";
 // components
-import Channel from "../components/Channel";
+import Channel, { ChannelTitle } from "../components/Channel";
+import { Icon } from "@iconify/react";
 // styles
 import classnames from "classnames";
+import "./home.css";
 
 const Home = () => {
   const { isBreak } = useContext(BreakPointRecoder);
 
   const noteArray: Channel[] = [
     {
-      title: "No sinal",
+      title: "No signal",
     },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
     {},
     {},
     {},
@@ -32,7 +26,9 @@ const Home = () => {
   ];
   const shardProjectArray = [
     {
-      title: "No sinal",
+      title: "No signal",
+      link: "./sharedprojects/nosignal",
+      description: "test project",
     },
     {},
     {},
@@ -43,27 +39,40 @@ const Home = () => {
     {},
   ];
 
-  return (
+  return isBreak ? (
+    <div>
+      <p>mobile navigation</p>
+    </div>
+  ) : (
     <div
       className={classnames(
         "h-full w-full",
-        "flex flex-col justify-center items-center",
+        "grid grid-col grid-cols-2 justify-center items-center",
+        "desktop-home",
       )}
     >
-      {/* {isBreak ? <div>mobile navigation</div> : "breakTaker"} */}
-      <p className="w-full text-2xl tracking-widest px-16">社課筆記</p>
+      <ChannelTitle roundedTopRight className="top-[15%]">
+        <p>社課</p>
+        <p>筆記</p>
+      </ChannelTitle>
       <Channel
         channels={noteArray}
+        classNameContainer="px-6"
         classNameChannel={classnames(
-          "min-h-[200px] min-w-[300px] bg-opacity-50",
+          "min-h-[250px] min-w-[375px] max-h-[30vmax] max-w-[30vmax] bg-opacity-20 bg-base-content",
         )}
       />
-      <p className="w-full text-2xl tracking-widest px-16">專案共享</p>
+      <ChannelTitle roundedBottomRight className="bottom-[15%]">
+        <p>專案</p>
+        <p>共享</p>
+      </ChannelTitle>
       <Channel
         channels={shardProjectArray}
+        classNameContainer="px-6"
         classNameChannel={classnames(
-          "min-h-[200px] min-w-[300px] bg-opacity-50",
+          "min-h-[250px] min-w-[375px] max-h-[30vmax] max-w-[30vmax] bg-opacity-20 bg-base-content",
         )}
+        showTitle
       />
     </div>
   );
