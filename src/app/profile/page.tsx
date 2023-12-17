@@ -8,9 +8,10 @@ import { getServerSession } from "next-auth";
 import { fetchUser } from "./fetchUser";
 import ProfileForm from "./components/ProfileForm";
 import Role from "./components/Role";
+import { authOptions } from "@/api/auth/[...nextauth]/route";
 
 export default async function Profile() {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   // const user = await fetchUser(session!.user!.email as string)
   const user = await fetchUser("sample@email.com");
 

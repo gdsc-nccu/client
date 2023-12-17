@@ -13,6 +13,7 @@ import Header from "../components/navigation/header";
 import { Noto_Sans_TC } from "next/font/google";
 import classnames from "classnames";
 import "./globals.css";
+import { authOptions } from "./api/auth/[...nextauth]/route";
 
 const inter = Noto_Sans_TC({ subsets: ["latin"] });
 
@@ -33,7 +34,7 @@ export default async function RootLayout({
   // const isLogin = useAppSelector((state) => state.User.isLogin);
   // const pathname = usePathname();
 
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
 
   return (
     <html lang="en">
