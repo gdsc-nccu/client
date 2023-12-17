@@ -34,18 +34,14 @@ const SharedProjects = ({ params }: { params: { slug: string } }) => {
       )}
     >
       {!isBreak && (
-        <ChannelTitle
-          roundedTopRight
-          roundedBottomRight
-          className="mt-[15%] mb-[15%] h-[70%]"
-        >
+        <ChannelTitle roundedTopRight roundedBottomRight className="h-[65%]">
           <p>專案</p>
           <p>共享</p>
         </ChannelTitle>
       )}
       <div
         className={classnames(
-          "h-full w-auto basic-content gap-2 p-2",
+          "h-full w-auto sharedprojects-content gap-2 p-2",
           isBreak ? "flex flex-col" : "grid grid-cols-2",
         )}
       >
@@ -57,8 +53,8 @@ const SharedProjects = ({ params }: { params: { slug: string } }) => {
           <Image
             src={groupData.preview}
             alt={groupData.title + " preview"}
-            width={2000}
-            height={2000}
+            width={1000}
+            height={1000}
           />
         </div>
         <div className="gap-2 flex flex-col justify-center items-center ">
