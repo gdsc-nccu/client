@@ -8,6 +8,9 @@ import DevUtils from "../../DevPannel";
 import HeaderBurger from "./nav/mobileBurger";
 import DesktopNav from "./nav/desktopNav";
 import HeaderLoading from "./loading";
+import StyledLink from "./StyledLink";
+import UserIcon from "../../../assets/icon/user";
+import GDSCBracketWhite from "../../../assets/icon/gdsc-bracket-white";
 // styles
 import classnames from "classnames";
 import "./header.css";
@@ -40,7 +43,7 @@ export default function Header({ outerRef }: Props) {
         "flex flex-row w-full items-center justify-between",
         "transition-colors duration-200 ease-in-out",
         isBreak && width !== 0
-          ? ["bg-base-300 text-base-content h-16"]
+          ? ["bg-base-300 text-base-content h-24"]
           : [
               { "bg-base-100 text-base-content": pathname !== "/profile" },
               {
@@ -58,6 +61,9 @@ export default function Header({ outerRef }: Props) {
         ) : isBreak ? (
           <>
             <HeaderBurger />
+            <StyledLink className="!m-0 !p-0 w-12 rounded-none" href="/">
+              <GDSCBracketWhite className="" />
+            </StyledLink>
             <div className="grow"></div>
             <div className="header-links justify-center flex">
               <button
@@ -72,6 +78,9 @@ export default function Header({ outerRef }: Props) {
               </button>
               <DevGroup />
             </div>
+            <StyledLink href="/profile">
+              <UserIcon className="text-4xl" />
+            </StyledLink>
           </>
         ) : (
           <DesktopNav pathname={pathname} devGroupButton={<DevGroup />} />
