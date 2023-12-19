@@ -1,0 +1,15 @@
+{
+  "name": "GDSC NCCU",
+  "short_name": "GDSC NCCU",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "description": "",
+  "icons": [
+    {
+      "src": "/logo-white.png",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
