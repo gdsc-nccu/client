@@ -1,3 +1,7 @@
 .desktop-home {
   grid-template-columns: min(20%, 10rem) max(80%, calc(100% - 10rem));
 }
+
+.mobile-home {
+  grid-template-rows: 60% 40%;
+}

@@ -1,0 +1,9 @@
+.project-group-info {
+  grid-template-rows: 5rem calc(100% - 14rem) 6rem 3rem;
+}
+
+@media screen and (max-width: 900px) {
+  .project-group-info {
+    grid-template-rows: 5rem calc(75% - 5rem) 15% 10%;
+  }
+}

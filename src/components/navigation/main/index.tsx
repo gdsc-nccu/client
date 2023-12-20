@@ -24,6 +24,8 @@ export default function Main({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (!prevBreak) {
+      // setInterval(() => {
+      // }, 3000);
       setIsLoading(false);
     }
   }, [prevBreak]);
@@ -37,7 +39,7 @@ export default function Main({ children }: { children: React.ReactNode }) {
         pathname === "/profile"
           ? "bg-base-200"
           : [{ "bg-base-300": isBreak }, { "bg-base-100": !isBreak }],
-        isBreak ? "h-[calc(100vh_-_4rem)]" : "h-[calc(100vh_-_8rem)]",
+        isBreak ? "h-[calc(100vh_-_6rem)]" : "h-[calc(100vh_-_8rem)]",
         {
           "delay-500": pathname === "/profile" && !isBreak,
         },

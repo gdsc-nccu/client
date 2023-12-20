@@ -22,7 +22,7 @@ const ChannelTitle = ({
   return (
     <div
       className={classnames(
-        "h-full w-full text-3xl flex flex-col justify-center items-center",
+        "w-full text-3xl flex flex-col justify-center items-center",
         "desktop-home-title relative",
         className,
       )}

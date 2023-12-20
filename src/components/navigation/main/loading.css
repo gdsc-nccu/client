@@ -2,6 +2,18 @@
   animation: main-loading 1s ease-in-out;
 }
 
+.main-loading {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .main-loading {
+    font-size: 2rem;
+    line-height: 1;
+  }
+}
+
 @keyframes main-loading {
   0% {
     opacity: 0;
@@ -9,5 +21,54 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+.welcome-image-people {
+  animation: welcome-image-people-animation 2s ease-in-out;
+  transform: scale(1) translateY(20vh);
+}
+
+@keyframes welcome-image-people-animation {
+  0% {
+    transform: scale(0.8) translateY(0);
+  }
+
+  33% {
+    transform: scale(1) translateY(0);
+  }
+
+  66% {
+    transform: scale(1) translateY(0);
+  }
+
+  100% {
+    transform: scale(1) translateY(20vh);
+  }
+}
+
+.welcome-image-flower {
+  animation: welcome-image-flower-animation 2s ease-in-out;
+  transform: scale(1) translateY(20vh);
+}
+
+@keyframes welcome-image-flower-animation {
+  0% {
+    transform: scale(0.8) translateY(-50vh);
+    opacity: 0;
+  }
+
+  33% {
+    transform: scale(1) translateY(-50vh);
+    opacity: 0;
+  }
+
+  66% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) translateY(20vh);
   }
 }

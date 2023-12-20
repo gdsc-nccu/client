@@ -1,0 +1,149 @@
+[
+  {
+    "name": "citizen_reporter",
+    "preview": "/preview/citizen_reporter.png",
+    "title": "公民新聞",
+    "descriptions": [
+      "公民新聞致力於落實媒體第四權。 以報導立法相關或重大議題科普知識和監督立法為原則，透過媒體力量，監督執政者並改善台灣。"
+    ],
+    "link": "https://drive.google.com/file/d/1VLUZsadvBCmBUdZ79lwkZ22tDm5tEC6T/view?usp=drive_link",
+    "members": [
+      "陳肇廷",
+      "王行遠",
+      "蘇胤翔",
+      "賴光禹",
+      "鄭睿宏",
+      "朱冠伍",
+      "詹茗偉"
+    ]
+  },
+  {
+    "name": "opennccu",
+    "preview": "/preview/opennccu.png",
+    "title": "OpenNCCU",
+    "descriptions": [
+      "Open NCCU 由國立政治大學學生創立，此組織期待打造「政大學生設計，設計給政大學生」的開發組織，讓政大學生也能實際參與推動政治大學的數位轉型。"
+    ],
+    "link": "https://drive.google.com/file/d/1pma4GLH49anF78VCFLwDcGKXAxI5TNID/view?usp=drive_link",
+    "members": [
+      "陳頌然",
+      "李昀臻",
+      "陳以勤",
+      "黃采婕",
+      "林采穎",
+      "黃永翔",
+      "張淮竣",
+      "吳欣穎",
+      "陳宣羽",
+      "謝昀芸"
+    ]
+  },
+  {
+    "name": "outfairy",
+    "preview": "/preview/outfairy.png",
+    "title": "OutFairy",
+    "descriptions": [
+      "透過App打造屬於你風格的虛擬衣櫃，並在系統記錄的同時，找出使用頻率低或不適合使用者的單品出售，以達環保永續。"
+    ],
+    "link": "https://drive.google.com/file/d/1nlxgWOVVOtolvfhwmyUCjcnu8ZxLrcWf/view?usp=drive_link",
+    "members": ["林沁儒", "梁祐睿", "蘇芷儀"]
+  },
+  {
+    "name": "nccupass",
+    "preview": "/preview/nccupass.png",
+    "title": "NCCUPass",
+    "descriptions": [
+      "NCCUPass團隊致力於重塑校園生活，旨在解決學生生活的不便並創造全新的校園體驗，並透過「政大通 - NCCUPass」APP，提供一個社交、實用和創新兼備的綜合型應用程式。這個APP與社群集結各領域精英，以改善並加強學生生活為目標。"
+    ],
+    "link": "https://drive.google.com/file/d/1PVf08JhcjI0XLPW-v0-WM49WWvRGcFKL/view?usp=drive_link",
+    "members": [
+      "劉威廷",
+      "劉祐辰",
+      "詹佳恩",
+      "張奕奇",
+      "黃茂勛",
+      "張甯媗",
+      "張誼安",
+      "劉詠熙",
+      "王毅超",
+      "楊晏禎",
+      "游橋茵",
+      "葉禹旋",
+      "王亭宇",
+      "蔡漩",
+      "曹馨云",
+      "何珮齊",
+      "蔡秀蓁",
+      "黃政詠"
+    ]
+  },
+  {
+    "name": "course_helper",
+    "preview": "/preview/course_helper.png",
+    "title": "選課作弊神器",
+    "descriptions": [
+      "解決選課排序的煩惱，以chrome插件查詢過往排序，可邊選課邊查詢，整合dcard、學生會、教務處資訊，也可回報自己的排序供後人參考。"
+    ],
+    "link": "https://drive.google.com/file/d/1aoueFi9E8y5qIxXcLr9TeWPjshd07Ut-/view?usp=drive_link",
+    "members": ["董諺楨", "王苡謙", "余則緯", "賴俊佑"],
+    "hints": ["course_helper這個縮寫是Github Copilot想的"]
+  },
+  {
+    "name": "bricks",
+    "preview": "/preview/bricks.png",
+    "title": "Bricks",
+    "descriptions": [
+      "許多大學生都有參與社團營隊等專案的經歷，然而多數專案都會面臨會議記錄雜亂的問題，雖然市面上有一些專案管理軟體，但除了可能需要付費外，學習成本也偏高。為了解決這個困擾，Bricks 誕生了！Bricks 是專為大學生量身打造的專案管理工具，主打簡約直覺又不失專業性，希望能解決既有的不變，讓每個人都能輕鬆管理專案！"
+    ],
+    "link": "https://drive.google.com/file/d/13l0mOvWnJdkbYe86HcO-iXbSumFwL54Z/view?usp=drive_link",
+    "members": [
+      "楊祁韋",
+      "蔡杞祥",
+      "林耕締",
+      "樊秉逸",
+      "鄭家晏",
+      "王珮諭",
+      "劉宸宇",
+      "萬丞庭",
+      "陳宣瑜",
+      "林姿慧",
+      "林品榮",
+      "王暐睿",
+      "陳沛瑜",
+      "王莉騏"
+    ]
+  },
+  {
+    "name": "nccufintechstudyclub",
+    "preview": "/preview/nccufintechstudyclub.png",
+    "title": "金融科技讀書會",
+    "descriptions": [
+      "嗨，我們是金融科技讀書會！ 我們聚集了許多對科技與數學於金融世界的應用有熱忱的同學，希望在共同加深加廣彼此於金融科技領域的認識的同時，也在政大內推廣金融科技知識，並協助會員尋找未來的專案或相關競賽的合作夥伴。"
+    ],
+    "link": "https://drive.google.com/file/d/17XyPZDPZenMsYz7CUKnsCGtFgeHgO-rI/view?usp=drive_link",
+    "members": [
+      "陳偉盛",
+      "陳昱銓",
+      "黃建焜",
+      "黃政詠",
+      "郭明潔",
+      "張晏菱",
+      "傅榆軒",
+      "王琪閔",
+      "蔡安德",
+      "王瀚",
+      "戴佳怡",
+      "曾怡瑄"
+    ]
+  },
+  {
+    "name": "pikmi",
+    "preview": "/preview/pikmi.png",
+    "title": "Pikmi",
+    "descriptions": [
+      "我們的團隊由一群專業的攝影師和設計人員所組成，致力於為客戶捕捉最美好的瞬間。我們注重細節，追求完美，讓每一個拍攝過程都充滿著愉悅和輕鬆的氛圍。"
+    ],
+    "link": "https://project.pikmi.app/",
+    "members": []
+  }
+]

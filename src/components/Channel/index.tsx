@@ -28,7 +28,7 @@ const Channel = ({
   return (
     <div
       className={classnames(
-        "w-full flex flex-row overflow-auto space-x-[2rem] px-16 p-8",
+        "w-full flex flex-row overflow-auto gap-12 px-16 p-8",
         classNameContainer,
       )}
     >
@@ -56,13 +56,13 @@ const Channel = ({
                   }
                   width={2000}
                   height={2000}
-                  className="rounded-3xl w-full h-full"
+                  className="rounded-3xl w-full h-full object-contain"
                 />
               ) : (
                 <div
                   className={classnames(
                     "h-full w-full relative",
-                    "flex flex-col spaxe-y-1 justify-center items-center opacity-60",
+                    "flex flex-col justify-center items-center opacity-60",
                     { "no-signal-glitch": glitch },
                   )}
                 >
