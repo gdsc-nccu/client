@@ -33,7 +33,7 @@ export default function Main({ children }: { children: React.ReactNode }) {
   return (
     <main
       className={classnames(
-        "flex flex-col w-full items-center justify-between",
+        "flex flex-col w-full items-center justify-between relative top-0 z-0",
         "transition-colors duration-200 ease-in-out",
         "text-base-content",
         pathname === "/profile"

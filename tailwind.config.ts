@@ -14,6 +14,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "desktop-home-title":
           "linear-gradient(90deg, #201836 0%, #352B4C 32.8%, #BDA5DA 248.58%, #D3ADFF 283.06%)",
+        "desktop-header":
+          "linear-gradient(180deg, #201836 0%, #201836 70.31%, rgba(32, 24, 54, 0.00) 100%)",
       },
       boxShadow: {
         "burger-item": "0px 1px 4.5px 0px rgba(0, 0, 0, 0.07)",

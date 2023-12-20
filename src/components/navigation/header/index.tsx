@@ -40,12 +40,14 @@ export default function Header({ outerRef }: Props) {
   return (
     <header
       className={classnames(
-        "flex flex-row w-full items-center justify-between",
+        "flex flex-row w-full items-center justify-between sticky top-0 z-50",
         "transition-colors duration-200 ease-in-out",
         isBreak && width !== 0
-          ? ["bg-base-300 text-base-content h-24"]
+          ? ["bg-base-300", "text-base-content h-24"]
           : [
-              { "bg-base-100 text-base-content": pathname !== "/profile" },
+              {
+                "bg-desktop-header text-base-content": pathname !== "/profile",
+              },
               {
                 "bg-base-200 text-base-content delay-500":
                   pathname === "/profile",
