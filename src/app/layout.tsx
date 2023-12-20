@@ -8,7 +8,7 @@ import { getServerSession } from "next-auth";
 import Login from "../components/Login";
 import Main from "../components/navigation/main";
 import Header from "../components/navigation/header";
-// import Footer from "../components/navigation/footer";
+import Footer from "../components/navigation/footer";
 // styles
 import { Noto_Sans_TC } from "next/font/google";
 import classnames from "classnames";
@@ -43,14 +43,14 @@ export default async function RootLayout({
           <div
             className={classnames(
               "flex w-full h-full min-h-screen flex-col items-center justify-between",
-              "bg-base-100",
+              "bg-base-100 relative",
             )}
           >
             {session && (
               <>
                 <Header />
                 <Main>{children}</Main>
-                {/* <Footer /> */}
+                <Footer />
               </>
             )}
             {!session && (
