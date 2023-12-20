@@ -24,6 +24,8 @@ export default function Main({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (!prevBreak) {
+      // setInterval(() => {
+      // }, 3000);
       setIsLoading(false);
     }
   }, [prevBreak]);
