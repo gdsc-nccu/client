@@ -1,12 +1,12 @@
 "use client";
 // utils
 import React from "react";
+import tmpData from "../assets/tmpData/groupData.json";
 // hooks
 import { useContext } from "react";
 import { BreakPointRecoder } from "../components/navigation/main";
 // components
 import Channel, { ChannelTitle } from "../components/Channel";
-import { Icon } from "@iconify/react";
 // styles
 import classnames from "classnames";
 import "./home.css";
@@ -24,20 +24,11 @@ const Home = () => {
     {},
     {},
   ];
-  const shardProjectArray = [
-    {
-      title: "No signal",
-      link: "./sharedprojects/nosignal",
-      description: "test project",
-    },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-  ];
+  const shardProjectArray = tmpData.map((member, index) => ({
+    title: member.title,
+    preview: member.preview,
+    link: "./sharedprojects#" + member.name,
+  }));
 
   return isBreak ? (
     <div

@@ -15,7 +15,10 @@ const GroupInfo = ({
   isBreak: boolean;
 }) => {
   return (
-    <div className={classnames("h-full w-auto project-group-info px-12 grid")}>
+    <div
+      className={classnames("h-full w-auto project-group-info px-12 grid")}
+      id={groupData.name}
+    >
       <div className="flex justify-center items-center tracking-widest py-4">
         <p className="text-3xl w-full h-full font-bold border-b">
           {groupData.title}
@@ -61,21 +64,21 @@ const GroupInfo = ({
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundOrigin: "border-box",
-              filter: "url('#filter-radius')",
+              // filter: "url('#filter-radius')",
             }}
           ></div>
         </div>
 
         <div className="gap-2 flex flex-col justify-center items-center p-2 w-full">
           {groupData.descriptions.map((description, index) => (
-            <p key={index} className="text-2xl w-full">
+            <p key={index} className="text-xl w-full">
               {description}
             </p>
           ))}
         </div>
       </div>
 
-      <div className="flex text-2xl justify-start items-center tracking-widest">
+      <div className="flex text-xl justify-start items-center tracking-widest">
         <p>
           組員：
           {groupData.members.map((member, index) => (

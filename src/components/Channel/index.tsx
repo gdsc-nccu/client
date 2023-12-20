@@ -56,7 +56,7 @@ const Channel = ({
                   }
                   width={2000}
                   height={2000}
-                  className="rounded-3xl w-full h-full"
+                  className="rounded-3xl w-full h-full object-contain"
                 />
               ) : (
                 <div

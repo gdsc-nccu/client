@@ -3,7 +3,6 @@
 import { useContext } from "react";
 import { BreakPointRecoder } from "../../components/navigation/main";
 // components
-import Logo from "/public/logo-white.png";
 import { ChannelTitle } from "../../components/Channel";
 import { GroupInfo } from "../../components/ProjectIntro";
 // utils
@@ -12,7 +11,7 @@ import tmpData from "../../assets/tmpData/groupData.json";
 // styles
 import classnames from "classnames";
 
-const SharedProjects = ({ params }: { params: { slug: string } }) => {
+const SharedProjects = () => {
   const { isBreak } = useContext(BreakPointRecoder);
 
   return (
