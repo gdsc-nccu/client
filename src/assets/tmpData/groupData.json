@@ -135,5 +135,15 @@
       "戴佳怡",
       "曾怡瑄"
     ]
+  },
+  {
+    "name": "pikmi",
+    "preview": "/preview/pikmi.png",
+    "title": "Pikmi",
+    "descriptions": [
+      "我們的團隊由一群專業的攝影師和設計人員所組成，致力於為客戶捕捉最美好的瞬間。我們注重細節，追求完美，讓每一個拍攝過程都充滿著愉悅和輕鬆的氛圍。"
+    ],
+    "link": "https://project.pikmi.app/",
+    "members": []
   }
 ]
