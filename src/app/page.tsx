@@ -64,7 +64,7 @@ const Home = () => {
         "desktop-home",
       )}
     >
-      <ChannelTitle roundedTopRight className="top-[12.5%]">
+      <ChannelTitle roundedTopRight className="top-[12.5%] h-full">
         <p>社課</p>
         <p>筆記</p>
       </ChannelTitle>
@@ -75,7 +75,7 @@ const Home = () => {
           "h-[250px] w-[375px] max-h-[25vh] max-w-[30vmax] bg-opacity-20 bg-base-content",
         )}
       />
-      <ChannelTitle roundedBottomRight className="bottom-[12.5%]">
+      <ChannelTitle roundedBottomRight className="bottom-[12.5%] h-full">
         <p>專案</p>
         <p>共享</p>
       </ChannelTitle>
