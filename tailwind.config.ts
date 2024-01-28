@@ -19,6 +19,7 @@ const config: Config = {
       },
       boxShadow: {
         "burger-item": "0px 1px 4.5px 0px rgba(0, 0, 0, 0.07)",
+        "mobile-item": "0px 5px 4px 0px rgba(0, 0, 0, 0.25)",
       },
     },
   },
@@ -73,7 +74,7 @@ const config: Config = {
           "error-content": "#F0F0F0",
           "base-100": "#201836",
           "base-200": "#7261FF",
-          "base-300": "#6110DB",
+          "base-300": "#5649C3",
           "base-content": "#F4F2F2",
         },
       },
