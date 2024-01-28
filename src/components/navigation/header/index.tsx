@@ -5,7 +5,7 @@ import { useRef, useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 // components
 import DevUtils from "../../DevPannel";
-import HeaderBurger from "./nav/mobileBurger";
+import MobileBurger from "./nav/mobileBurger";
 import DesktopNav from "./nav/desktopNav";
 import HeaderLoading from "./loading";
 import StyledLink from "./StyledLink";
@@ -62,7 +62,7 @@ export default function Header({ outerRef }: Props) {
           <HeaderLoading />
         ) : isBreak ? (
           <>
-            <HeaderBurger />
+            <MobileBurger />
             <StyledLink className="!m-0 !p-0 w-12 rounded-none" href="/">
               <GDSCBracketWhite className="" />
             </StyledLink>

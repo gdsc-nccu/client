@@ -40,7 +40,8 @@ export default function HeaderBurger({}: Props) {
       <div className="w-full grow pt-8">
         {[
           ["首頁", "/"],
-          ["專案共享平台", "/myprojects"],
+          // ["專案共享平台", "/myprojects"],
+          ["個人資料", "/profile"],
         ].map((item, index) => (
           <Link href={item[1]} key={index} onClick={handleClose}>
             <div
