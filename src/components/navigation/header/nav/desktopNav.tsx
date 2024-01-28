@@ -40,9 +40,9 @@ const DesktopNav = ({ pathname, devGroupButton }: Props) => {
         >
           社團表單
         </StyledLink>
-        <StyledLink href="/">
+        {/* <StyledLink href="/">
           <Icon icon="fe:home" className="text-3xl" />
-        </StyledLink>
+        </StyledLink> */}
         {devGroupButton}
       </div>
       <div className="flex flex-row">
