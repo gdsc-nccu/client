@@ -48,7 +48,9 @@ const Channel = ({
                   : channel.link
               }
             >
-              {channel.preview ? (
+              {channel.children ? (
+                channel.children
+              ) : channel.preview ? (
                 <Image
                   src={channel.preview}
                   alt={

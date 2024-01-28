@@ -7,6 +7,9 @@ import { useContext } from "react";
 import { BreakPointRecoder } from "../components/navigation/main";
 // components
 import Channel, { ChannelTitle } from "../components/Channel";
+import FolderIcon from "../assets/icon/mobile/folder";
+import FormIcon from "../assets/icon/mobile/form";
+import LinkIcon from "../assets/icon/mobile/link";
 // styles
 import classnames from "classnames";
 import "./home.css";
@@ -16,7 +19,7 @@ const Home = () => {
 
   const noteArray: Channel[] = [
     {
-      title: "No signal",
+      title: "No signaeel",
     },
     {},
     {},
@@ -38,12 +41,51 @@ const Home = () => {
         "mobile-home",
       )}
     >
-      <div></div>
+      <div className="px-16 text-4xl font-semibold tracking-widest space-y-1">
+        <p>歡迎來到</p>
+        <p>GDSC.</p>
+      </div>
+      <div className="border">e</div>
       <Channel
-        channels={noteArray}
-        classNameContainer="h-full px-[calc(15%_-_1rem)] px-10 !gap-8"
+        channels={[
+          {
+            children: (
+              <div className="flex flex-col justify-center items-center h-full w-full gap-2">
+                <p className="text-info font-normal tracking-widest">
+                  我的專案
+                </p>
+                <FolderIcon />
+              </div>
+            ),
+            link: "/myprojects",
+          },
+          {
+            children: (
+              <div className="flex flex-col justify-center items-center h-full w-full gap-2">
+                <p className="text-info font-normal tracking-widest">
+                  社團表單
+                </p>
+                <FormIcon />
+              </div>
+            ),
+            link: "/form",
+          },
+          {
+            children: (
+              <div className="flex flex-col justify-center items-center h-full w-full gap-2">
+                <p className="text-info font-normal tracking-widest">
+                  Discord綁定
+                </p>
+                <LinkIcon />
+              </div>
+            ),
+            title: "Discord綁定",
+            // link: "/discord",
+          },
+        ]}
+        classNameContainer="px-[calc(max(15%,_17.5vw)_-_2rem)] !gap-8"
         classNameChannel={classnames(
-          "w-[35vw] h-[35vw] aspect-square bg-opacity-20 bg-base-content",
+          "w-[35vw] h-[35vw] max-h-[30vh] max-w-[30vh] aspect-square !bg-base-300 !border-none shadow-mobile-item",
         )}
       />
     </div>
