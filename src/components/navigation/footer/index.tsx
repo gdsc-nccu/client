@@ -27,12 +27,14 @@ export default function Footer({}: Props) {
   const { width, height, isBreak } = useUnitedResize("mobileBreak", ref);
   const pathname = usePathname();
 
+  const hide = isBreak || pathname !== "/";
+
   return (
     <footer
       className={classnames(
         "flex w-full items-center justify-between",
         "transition-colors duration-500 ease-in-out",
-        isBreak ? "h-0" : "h-[calc(50vh_-_4rem)]",
+        hide ? "h-0" : "h-[calc(50vh_-_4rem)]",
         { "bg-base-100 text-base-content": pathname !== "/profile" },
         {
           "bg-base-200 text-base-content": pathname === "/profile",
@@ -47,7 +49,7 @@ export default function Footer({}: Props) {
           isBreak: isBreak ? isBreak : false,
         }}
       >
-        {isBreak ? (
+        {hide ? (
           <></>
         ) : (
           <div className="w-full h-full px-4 flex flex-col gap-6 justify-center items-center ">
